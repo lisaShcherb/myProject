@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, YellowBox } from 'react-native';
 import React from "react";
 
 const Home = () => {
@@ -36,7 +36,6 @@ const Home = () => {
       <Text style={styles.textResultRed1}> Over Weight</Text> 
       </View>
 
-
       <TouchableOpacity style={styles.goButton} onPress={() => {
         console.log("Вычисляю")
         }}> 
@@ -47,7 +46,6 @@ const Home = () => {
      </View>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -134,7 +132,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 520,
     left: 145,
-    
     borderRadius: 10,
   },
 
@@ -148,8 +145,8 @@ const styles = StyleSheet.create({
    textResultGreen1: {
     color: "rgba(50, 47, 1, 1)",
     fontWeight: "500",
-    fontSize: 11,
-    padding: 6,
+    fontSize: 13,
+    padding: 3,
    },
 
    ResultStyleRed: {
@@ -175,7 +172,7 @@ const styles = StyleSheet.create({
     color: "rgba(50, 47, 1, 1)",
     fontWeight: "500",
     fontSize: 13,
-    padding: 6,
+    padding: 4,
     paddingLeft: 10,
    },
 
