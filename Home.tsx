@@ -19,7 +19,7 @@ const Home = () => {
     if (isNaN(currentWeight) || isNaN(currentHeight)) { //проверка, что вычисляться будут числа
       return;
     }
-let regex = /\b/
+
     // const heightMetrs = currentHeight / 100;
     setBMI(Number((currentWeight / ((currentHeight * currentHeight)/10000)).toFixed(1)));
   };
@@ -71,7 +71,7 @@ let regex = /\b/
       <Text style={styles.textResultYellow1}> Under Weight</Text> 
       </View>
 
-      {/* <View style={styles.ResultStyleGreen}> */}
+     
       <View
           style={[styles.ResultStyleGreen, 
           BMI > 18.5 && BMI < 25 && { opacity: 1 }]}
@@ -84,7 +84,7 @@ let regex = /\b/
       <Text style={styles.textResultGreen1}> Normal Weight</Text> 
       </View>
 
-      {/* <View style={styles.ResultStyleRed}> */}
+
       <View style={[styles.ResultStyleRed, BMI >= 25 && { opacity: 1 }]}>
       <Image
               style={styles.imageRed} 
@@ -97,7 +97,7 @@ let regex = /\b/
       <TouchableOpacity style={styles.goButton} onPress={() => {
         handlerCalcBMI();
         }} 
-        disabled = true > 
+       > 
         <Text style={styles.goButtonText}>Go</Text> 
         </TouchableOpacity>
 
